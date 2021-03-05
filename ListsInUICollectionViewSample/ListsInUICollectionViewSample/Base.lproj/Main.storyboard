@@ -36,6 +36,9 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FDt-p3-lZh"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,6 +50,9 @@
                             <constraint firstItem="Xnz-DF-CQH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ued-GZ-0dC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Xnz-DF-CQH" id="Bzx-F9-i9W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
