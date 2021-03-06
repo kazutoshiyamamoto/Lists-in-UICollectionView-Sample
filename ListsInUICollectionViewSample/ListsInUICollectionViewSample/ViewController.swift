@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // セルをUICollectionViewに提供するために使用するオブジェクト
+    var dataSource: UICollectionViewDiffableDataSource<Section, String>! = nil
     
     // セクションの種類
     enum Section {
