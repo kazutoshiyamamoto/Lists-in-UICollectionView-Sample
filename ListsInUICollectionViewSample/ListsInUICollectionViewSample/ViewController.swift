@@ -11,6 +11,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    // セクションの種類
+    enum Section {
+        case main
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
