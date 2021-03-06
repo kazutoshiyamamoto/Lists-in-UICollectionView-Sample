@@ -39,6 +39,12 @@ class ViewController: UIViewController {
             cell.contentConfiguration = content
         }
         
+        dataSource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, item: String) -> UICollectionViewCell? in
+            
+            // 再利用可能なセルを返す
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
+        }
+        
     }
 
 
