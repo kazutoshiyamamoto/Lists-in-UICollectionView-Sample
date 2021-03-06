@@ -32,6 +32,13 @@ class ViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
         collectionView.collectionViewLayout = layout
         
+        // セルを登録
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, String> { (cell, indexPath, item) in
+            var content = cell.defaultContentConfiguration()
+            content.text = item
+            cell.contentConfiguration = content
+        }
+        
     }
 
 
