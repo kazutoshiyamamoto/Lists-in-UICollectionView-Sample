@@ -48,6 +48,8 @@ class ViewController: UIViewController {
         var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
         // セクションを追加
         snapshot.appendSections([.main])
+        // 表示するデータを追加
+        snapshot.appendItems(colorNames)
     }
 }
 
