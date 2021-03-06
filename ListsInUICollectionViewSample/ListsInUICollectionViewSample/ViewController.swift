@@ -50,6 +50,8 @@ class ViewController: UIViewController {
         snapshot.appendSections([.main])
         // 表示するデータを追加
         snapshot.appendItems(colorNames)
+        // snapshotを適用して、UIの変更を反映
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 
