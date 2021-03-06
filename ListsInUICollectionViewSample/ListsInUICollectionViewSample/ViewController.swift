@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         // リストのレイアウトの設定
         let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
@@ -46,7 +45,5 @@ class ViewController: UIViewController {
         }
         
     }
-
-
 }
 
