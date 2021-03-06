@@ -44,6 +44,8 @@ class ViewController: UIViewController {
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
         }
         
+        // UICollectionViewにデータを提供する構造体
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
     }
 }
 
