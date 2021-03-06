@@ -46,6 +46,8 @@ class ViewController: UIViewController {
         
         // UICollectionViewにデータを提供する構造体
         var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        // セクションを追加
+        snapshot.appendSections([.main])
     }
 }
 
