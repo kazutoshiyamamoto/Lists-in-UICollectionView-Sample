@@ -25,6 +25,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // リストのレイアウトの設定
+        let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
+        // すべてのセクションでconfigurationの設定を使用する
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        collectionView.collectionViewLayout = layout
+        
     }
 
 
