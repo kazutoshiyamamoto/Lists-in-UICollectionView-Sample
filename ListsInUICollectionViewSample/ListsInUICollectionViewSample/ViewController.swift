@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     // セルをUICollectionViewに提供するために使用するオブジェクト
@@ -24,13 +24,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureLayout()
+        configureDataSource()
+    }
+    
+    private func configureLayout() {
         // リストのレイアウトの設定
         let configuration = UICollectionLayoutListConfiguration(appearance: .plain)
         // すべてのセクションでconfigurationの設定を使用する
         let layout = UICollectionViewCompositionalLayout.list(using: configuration)
         collectionView.collectionViewLayout = layout
-        
+    }
+    
+    private func configureDataSource() {
         // セルを登録
         let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, String> { (cell, indexPath, item) in
             var content = cell.defaultContentConfiguration()
@@ -39,7 +45,6 @@ class ViewController: UIViewController {
         }
         
         dataSource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, item: String) -> UICollectionViewCell? in
-            
             // 再利用可能なセルを返す
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
         }
